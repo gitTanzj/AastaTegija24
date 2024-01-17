@@ -63,7 +63,6 @@ body *{
     margin: 0px;
     padding: 5px;
 }
-<<<<<<< HEAD
 
 /*Centers the menubar and it's properties inside it.*/
 #menubar{
@@ -88,11 +87,10 @@ body *{
     color: white;
     text-decoration: none;
     padding: 4em
-=======
+}
 .agenda-footer{
     width: 80%;
     margin: auto;
     padding: 10px;
     text-align: center;
->>>>>>> agenda
 }
