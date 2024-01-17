@@ -30,14 +30,17 @@
             </h1>
             <div id="agenda-switch">
                 <div class="agenda-switch-days">
-                    <div>
-
+                    <div class="day-switch active">
+                        <h6>1st Day</h6>
+                        <p>April 25, 2024</p>
                     </div>
-                    <div>
-
+                    <div class="day-switch">
+                        <h6>2nd Day</h6>
+                        <p>April 26, 2024</p>
                     </div>
-                    <div>
-
+                    <div class="day-switch">
+                        <h6>3rd Day</h6>
+                        <p>April 27, 2024</p>
                     </div>
                 </div>
                 <div class="agenda-list">
@@ -47,7 +50,9 @@
                                 <p>13.00-15:00</p>
                                 <a href="https://www.google.com/maps/place/Tartu+Rakenduslik+Kolled%C5%BE/@58.34692,26.7136964,15.25z/data=!4m6!3m5!1s0x46eb37487c7817f9:0x31f91313d1bbe0ee!8m2!3d58.3498339!4d26.7155093!16s%2Fg%2F1tgnks1t?entry=ttu" target="_blank">Tartu VOCO, Kopli 1a, Tartu</a>
                             </div>
-                            <h3>Arrival of national delegations</h3>
+                            <div class="agenda-item-header">
+                                <h2>Arrival of national delegations</h2>
+                            </div>
                         </div>
                     </div>
                     <div class="agenda-item-container">
@@ -56,7 +61,9 @@
                                 <p>15.00-16.30</p>
                                 <a href="https://www.google.com/maps/place/Tartu+Rakenduslik+Kolled%C5%BE/@58.34692,26.7136964,15.25z/data=!4m6!3m5!1s0x46eb37487c7817f9:0x31f91313d1bbe0ee!8m2!3d58.3498339!4d26.7155093!16s%2Fg%2F1tgnks1t?entry=ttu" target="_blank">Tartu VOCO</a>
                             </div>
-                            <h3>Lunch</h3>
+                            <div class="agenda-item-header">
+                                <h2>Lunch</h2>
+                            </div>
                         </div>
                     </div>
                     <div class="agenda-item-container">
@@ -65,16 +72,20 @@
                                 <p>16.00-16.30</p>
                                 <a href="https://www.google.com/maps/place/Tartu+Rakenduslik+Kolled%C5%BE/@58.34692,26.7136964,15.25z/data=!4m6!3m5!1s0x46eb37487c7817f9:0x31f91313d1bbe0ee!8m2!3d58.3498339!4d26.7155093!16s%2Fg%2F1tgnks1t?entry=ttu" target="_blank">Tartu VOCO</a>
                             </div>
-                            <h3>Delegation leaders meeting</h3>
+                            <div class="agenda-item-header">
+                                <h2>Delegation leaders meeting</h2>
+                            </div>       
                         </div>
                     </div>
                     <div class="agenda-item-container">
                         <div class="agenda-item">
                             <div class="agenda-item-info">
                                 <p>18.00-19.00</p>
-                                <a href="https://www.google.com/maps/place/Tartu+Rakenduslik+Kolled%C5%BE/@58.34692,26.7136964,15.25z/data=!4m6!3m5!1s0x46eb37487c7817f9:0x31f91313d1bbe0ee!8m2!3d58.3498339!4d26.7155093!16s%2Fg%2F1tgnks1t?entry=ttu" target="_blank">Tartu VOCO</a>
+                                <a href="https://www.google.com/maps/place/Estonian+National+Museum/@58.3950335,26.7323184,13.96z/data=!4m14!1m7!3m6!1s0x46eb37487c7817f9:0x31f91313d1bbe0ee!2sTartu+Rakenduslik+Kolled%C5%BE!8m2!3d58.3498339!4d26.7155093!16s%2Fg%2F1tgnks1t!3m5!1s0x46eb371e0069d991:0x3b484674469f1cea!8m2!3d58.3957606!4d26.7463007!16s%2Fm%2F04n5g7n?entry=ttu" target="_blank">Estonian National Museum, Muuseumi tee 2, Tartu</a>
                             </div>
-                            <h3>Opening ceremony</h3>
+                            <div class="agenda-item-header">
+                                <h2>Opening ceremony</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,5 +98,17 @@
 </body>
     <script>
         
+        daySwitch = document.querySelectorAll(".day-switch");
+
+        daySwitch.forEach((day) => {
+            day.addEventListener("click", () => {
+                daySwitch.forEach((day) => {
+                    day.classList.remove("active");
+                    console.log(day)
+                });
+                day.classList.add("active");
+            });
+        });
+
     </script>
 </html>

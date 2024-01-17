@@ -20,13 +20,32 @@ body *{
     justify-content: center;
 }
 .agenda-switch-days{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 20px;
+    width: 10%;
+}
+.day-switch{
+    padding: 10px;
+    background-color: white;
+    color: #00B89D;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    transition: 0.1s;
+}
+.day-switch:hover{
+    cursor: pointer;
+}
+.day-switch h6{
+    font-size: 18px;
 }
 .agenda{
     width: 80%;
     box-shadow: 0px 5px 5px #F5F7FA;
     margin: auto;
     border: 1px solid black;
+    padding-bottom: 20px;
 }
 .agenda-list{
     width: 70%;
@@ -46,8 +65,8 @@ body *{
     padding: 0px 40px 0px 40px;
     justify-content: space-between;
 }
-.agenda-item h3{
-    justify-content: cetn;
+.agenda-item-header{
+    padding: 20px;
 }
 .agenda-item a{
     text-decoration: underline;
@@ -62,6 +81,12 @@ body *{
 .agenda-item-info *{
     margin: 0px;
     padding: 5px;
+}
+
+.active {
+    background-color: #00B89D;
+    color: white;
+    border: 1px solid #00B89D;
 }
 
 /*Centers the menubar and it's properties inside it.*/
@@ -91,6 +116,6 @@ body *{
 .agenda-footer{
     width: 80%;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
