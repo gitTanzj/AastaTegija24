@@ -21,7 +21,7 @@ body *{
     margin: 0px;
     padding: 0px;
 }
-section::before{
+.section::before{
     content: "";
     display: block;
     height: 100px;
@@ -213,6 +213,10 @@ section::before{
 /* Contact list item images. */
 .Contact img{
     margin-right: 0.25em;
+}
+
+.Contact a{
+    color: white;
 }
 
 /* Pushes Organizer a little closer to the middle. */
@@ -490,7 +494,6 @@ section::before{
 }
 
 #img_div {
-    
     justify-content: center;
     align-items: center;
     margin-right: auto;
@@ -504,22 +507,16 @@ section::before{
     margin-top: 1%;
     padding: 12px;
     gap: 90px;
-    
-    
+
 }
 
 
 #fun_m {
     position: relative;
-    top: initial;
-    
-    
-    
+    top: initial;  
 }
 
 #un_mot {
     position: relative;
-    top: initial;
-    
-    
+    top: initial; 
 }

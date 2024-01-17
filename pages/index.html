@@ -23,7 +23,7 @@
       </header>
     </section>
     <!-- BANNER -->
-    <section id="bannerSection">
+    <section id="bannerSection" class="section">
         <div class="banner">
             <div class="slideshow-container">
                 <div class="banners face">
@@ -73,7 +73,7 @@
 
     </section>
     <!-- AGENDA -->
-    <section id="agendaSection">
+    <section id="agendaSection" class="section">
         <div class="agenda">
             <h1 class="agenda-header">
                 Agenda
@@ -653,7 +653,7 @@
         </div>
     </section>
     <!-- HISTORY -->
-    <section id="historySection">
+    <section id="historySection" class="section">
         <div id="hist_div">
             <!--TITLE-->
             <div id="hist_title">
@@ -687,7 +687,7 @@
         </div>
     </section>
     <!-- SPONSORS -->
-    <section id="sponsorsSection">
+    <section id="sponsorsSection" class="section">
         <div>
             <div id="spons_title">
                 <a class="spons_t_disain">Sponsors</a>
@@ -704,16 +704,16 @@
         </div>
     </section>
 </body>
-<footer id="footerSection">
+<footer id="footerSection" class="section">
     <div class="Contact">
         <p>Contact</p>
         <div class="Contact_list1">
-            <li><img src="../assets/icons/at-symbol.png"><p>www.ekksl.ee</p></li>
+            <li><img src="../assets/icons/at-symbol.png"><p><a href="https://www.ekksl.ee" target="_blank">www.ekksl.ee</a></p></li>
             <li><img src="../assets/icons/Vector.png"><p>Aardla 23b, Tartu</p></li>
         </div>
         <div class="Contact_list2">
-            <li><img src="../assets/icons/globe-alt.png"></a><p>tiit@ekksl.ee</p></li>
-            <li><img src="../assets/icons/Phone.png"></a><p>+372 56 111 866</p></li>
+            <li><img src="../assets/icons/globe-alt.png"><p><a href="mailto:tiit@ekksl.ee">tiit@ekksl.ee</a></p></li>
+            <li><img src="../assets/icons/Phone.png"><p>+372 56 111 866</p></li>
         </div>
     </div>
     <div class="Organizers">
@@ -761,7 +761,9 @@
             }
             
             slideIndex++
-            if (slideIndex > slides.length) {slideIndex = 1}
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 5000)
         }
@@ -779,8 +781,6 @@
                 header.classList.remove("sticky");
             }
         }
-
-        
 
     </script>
 </html>
