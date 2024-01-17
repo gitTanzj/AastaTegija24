@@ -8,22 +8,22 @@
 </head>
 <body>
     <!-- HEADER -->
-    <section>
+    <section id="headerSection">
       <header id="menubar">
               <div class="links">
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">History</a></li>
+                  <li><a href="#agendaSection">Agenda</a></li>
+                  <li><a href="#historySection">History</a></li>
               </div>
-              <img src="../assets/logo.png" alt="EKKSL Logo">
+              <a href="#bannerSection"><img src="../assets/logos/logo.png" alt="EKKSL Logo"></a>
               <div class="links">
-                  <li><a href="#">Sponsors</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#sponsorsSection">Sponsors</a></li>
+                  <li><a href="#footerSection">Contact</a></li>
               </div>
           </nav>
       </header>
     </section>
     <!-- BANNER -->
-    <section>
+    <section id="bannerSection">
         <div class="banner">
             <div class="slideshow-container">
                 <div class="banners face">
@@ -73,7 +73,7 @@
 
     </section>
     <!-- AGENDA -->
-    <section>
+    <section id="agendaSection">
         <div class="agenda">
             <h1 class="agenda-header">
                 Agenda
@@ -653,7 +653,7 @@
         </div>
     </section>
     <!-- HISTORY -->
-    <section id="section">
+    <section id="historySection">
         <div id="hist_div">
             <!--TITLE-->
             <div id="hist_title">
@@ -681,13 +681,13 @@
                 </div>
                 <!--PILT-->
                 <div id="hist_p">
-                    <img id="hist_p_siz" src="../images/history.png">
+                    <img id="hist_p_siz" src="../assets/images/history.png">
                 </div>
             </div>
         </div>
     </section>
     <!-- SPONSORS -->
-    <section>
+    <section id="sponsorsSection">
         <div>
             <div id="spons_title">
                 <a class="spons_t_disain">Sponsors</a>
@@ -696,15 +696,15 @@
 
         <div id="img_div">
             <div>
-                <img id="fun_m" src="../images/FunMAker.png">
+                <img id="fun_m" src="../assets/images/FunMAker.png">
             </div>
             <div>
-                <img id="un_mot" src="../images/UnitedMotors.png">
+                <img id="un_mot" src="../assets/images/UnitedMotors.png">
             </div>
         </div>
     </section>
 </body>
-<footer id="footer">
+<footer id="footerSection">
     <div class="Contact">
         <p>Contact</p>
         <div class="Contact_list1">
@@ -718,7 +718,7 @@
     </div>
     <div class="Organizers">
         <p>Organizers</p>
-        <img src="../assets/EKKSL_VOCO.png" alt="EKKSL Logo">
+        <img src="../assets/logos/EKKSL_VOCO.png" alt="EKKSL Logo">
     </div>
 </footer>
     <script>
@@ -766,6 +766,21 @@
             setTimeout(showSlides, 5000)
         }
 
+        // STICKY HEADER
+        window.onscroll = () => stickyHeader();
+
+        var header = document.getElementById("headerSection");
+        var sticky = header.offsetTop;
+
+        const stickyHeader = () => {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        
 
     </script>
 </html>
