@@ -1,0 +1,13 @@
+@font-face{
+    font-family: 'Blackhawk Regular';
+    src: url('../assets/fonts/BLACKHAWK.otf') format("opentype");
+}
+
+#spons_t_disain {
+    color: #000;
+    font-family: BLACKHAWK;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
