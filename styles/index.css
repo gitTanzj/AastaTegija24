@@ -14,6 +14,11 @@ body *{
     margin: 0px;
     padding: 0px;
 }
+
+/* So that the footer stays at the bottom. */
+html, body{
+    height: 100%;
+}
 #agenda-switch{
     display: flex;
     flex-direction: row;
@@ -150,6 +155,67 @@ body *{
     text-align: center;
 }
 
+/* Sticky footer that always stays at the very bottom. */
+#footer{
+    display: flex;
+    position: sticky;
+    top: 100vh;
+    background-color: black;
+    justify-content: space-between;
+}
+/* Contact and Organizers title's. */
+#footer div{
+    display: inline-block;
+    color: white;
+    padding: 1em;
+    font-family: 'Blackhawk Regular';
+    font-size: xx-large;
+}
+
+/* Pushes Contact a little closer to the middle. */
+.Contact{
+    margin-left: 0.5em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Contact list items. */
+.Contact li p{
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+/* Because images and tex in a list item(li) don't align properly, we use flexbox to align them properly. */
+.Contact li{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0.25em;
+}
+
+/* Contact list item images. */
+.Contact img{
+    margin-right: 0.25em;
+}
+
+/* Pushes Organizer a little closer to the middle. */
+.Organizers{
+    margin-right: 0.5em;
+}
+
+/* Makes sure the title Organizers stays on the right. */
+.Organizers p{
+    display: flex;
+    justify-content: right;
+}
+
+/* Organizers img is moved more on the same level as Contact list items. */
+.Organizers img{
+    margin-top: 0.5em;
+}
+
 #triangle-right {
     width: 0;
     height: 0;
@@ -157,3 +223,198 @@ body *{
     border-left: 100px solid #00B89D;
     border-bottom: 50px solid transparent;
   }
+
+
+
+
+
+#sektsioon {
+    position: center;
+    align-items: center;
+    display: flow-root;
+    margin: auto;
+}
+
+
+/*Parent*/
+
+
+#kastid {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;       
+    position: relative;
+    /* min-height:385px; */
+    margin: 40px;
+    padding: 30px;
+
+}
+
+.scroll_par {
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding: 1em 1em 0;
+}
+
+.scroll_chil {
+    overflow: auto;
+    white-space: nowrap;
+    color: white;
+    padding-bottom: 1em;
+}
+
+
+
+/*child*/
+#kasti_valiskulg1 {
+    
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+ 
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../images/basket.png) no-repeat;
+    /* background-color: rgb(0, 0, 0); */
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg1:hover {
+    background: url(../images/kollane.png) no-repeat;
+}
+
+
+#kasti_valiskulg2 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../images/volley.png) no-repeat;
+    background-blend-mode: multiply;
+
+}
+#kasti_valiskulg2:hover {
+    background: url(../images/roheline.png) no-repeat;
+}
+
+#kasti_valiskulg3 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../images/table_tennis.png) no-repeat;
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg3:hover {
+    background: url(../images/sinine.png) no-repeat;
+}
+
+
+#kasti_valiskulg4 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../images/leaders.png) no-repeat;
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg4:hover {
+    background: url(../images/roosa.png) no-repeat;
+}
+
+.cls3 {
+    justify-content: center;
+    width: flex;
+    display:flex;
+    padding: 30px;
+    margin-bottom:15px;
+    position: relative;
+    top: initial;
+    text-align: center;
+    
+}
+
+#hist_div {
+    background: #F5F7FA;
+}
+
+#hist_title {
+    text-align: center;
+    padding-top: 20px;
+}
+.hist_t_disain {
+    color: #000;
+
+    font-family: 'Blackhawk Regular';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+#hist_t_p {
+    align-items: center;
+    margin-right: auto;
+    margin: auto;
+    width: 80%;
+    position: relative;
+    top: initial;
+    display: flex;
+}
+
+#hist_t {
+
+    position: relative;
+    top: initial;
+    margin-left: 40px;
+    color: var(--Must, #000);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 282;
+    height: 127;
+
+}
+
+.read_m {
+    text-align: right;   
+    margin-bottom: 1%;
+}
+
+#a_color {
+    color: #000;
+}
+
+#hist_p_siz {
+    margin: 10%;
+    position: relative;
+    width: 565px;
+    height: 397px;
+    flex-shrink: 0; 
+}
