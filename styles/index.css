@@ -14,6 +14,11 @@ body *{
     margin: 0px;
     padding: 0px;
 }
+
+/* So that the footer stays at the bottom. */
+html, body{
+    height: 100%;
+}
 #agenda-switch{
     display: flex;
     flex-direction: row;
@@ -93,4 +98,65 @@ body *{
     margin: auto;
     padding: 10px;
     text-align: center;
+}
+
+/* Sticky footer that always stays at the very bottom. */
+#footer{
+    display: flex;
+    position: sticky;
+    top: 100vh;
+    background-color: black;
+    justify-content: space-between;
+}
+/* Contact and Organizers title's. */
+#footer div{
+    display: inline-block;
+    color: white;
+    padding: 1em;
+    font-family: 'Blackhawk Regular';
+    font-size: xx-large;
+}
+
+/* Pushes Contact a little closer to the middle. */
+.Contact{
+    margin-left: 0.5em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Contact list items. */
+.Contact li p{
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+/* Because images and tex in a list item(li) don't align properly, we use flexbox to align them properly. */
+.Contact li{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0.25em;
+}
+
+/* Contact list item images. */
+.Contact img{
+    margin-right: 0.25em;
+}
+
+/* Pushes Organizer a little closer to the middle. */
+.Organizers{
+    margin-right: 0.5em;
+}
+
+/* Makes sure the title Organizers stays on the right. */
+.Organizers p{
+    display: flex;
+    justify-content: right;
+}
+
+/* Organizers img is moved more on the same level as Contact list items. */
+.Organizers img{
+    margin-top: 0.5em;
 }
