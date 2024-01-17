@@ -26,16 +26,16 @@
     <section>
         <div class="banner">
             <div class="slideshow-container">
-                <div class="mySlides fade">
+                <div class="banners face">
                     <img src="../assets/banners/Bänner 2.png" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                <div class="banners fade">
                     <img src="../assets/banners/Bänner 3.png" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                <div class="banners fade">
                     <img src="../assets/banners/Bänner 4.png" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                <div class="banners fade">
                     <img src="../assets/banners/Bänner 5.png" style="width:100%">
                 </div>
             </div>
@@ -412,7 +412,7 @@
                                 <h1>VS</h1>
                                 <div class="country-flag">
                                     <img src="../assets/flags/Country=Läti.svg" alt="Latvia">
-                                    <p>LIT</p>
+                                    <p>LAT</p>
                                 </div>
                             </div>
                         </div>
@@ -433,7 +433,7 @@
                                 <h1>VS</h1>
                                 <div class="country-flag">
                                     <img src="../assets/flags/Country=Läti.svg" alt="Latvia">
-                                    <p>LIT</p>
+                                    <p>LAT</p>
                                 </div>
                             </div>
                         </div>
@@ -675,7 +675,7 @@
                     <br>
                     <div>
                         <div class="read_m" >
-                            <a id='a_color' href="https://ekksl.ee/baltimangud/ajaluguhistory/">Read more</a>>
+                            <a id='a_color' href="https://ekksl.ee/baltimangud/ajaluguhistory/" target="_blank">Read more</a>>
                         </div>
                     </div>
                 </div>
@@ -705,6 +705,8 @@
     </div>
 </footer>
     <script>
+
+        // AGENDA DAY SWITCH
         daySwitch = Array.from(document.querySelectorAll(".day-switch"));
         schedules = Array.from(document.querySelectorAll(".agenda-list"));
         currDay = 0;
@@ -727,5 +729,26 @@
                 }
             });
         });
+
+        // IMAGE CAROUSEL ON BANNER
+        let slideIndex = 1;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("banners");
+            
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            slideIndex++
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000)
+        }
+
+
     </script>
 </html>

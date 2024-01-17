@@ -30,7 +30,7 @@ html, body{
     justify-content: right;
     gap: 5px;
     padding: 20px;
-    width: 10%;
+    width: 20%;
     margin-right: 10px;
 }
 .day-switch{
@@ -43,6 +43,8 @@ html, body{
 }
 .day-switch:hover{
     cursor: pointer;
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px black;
 }
 .day-switch h6{
     font-size: 18px;
@@ -54,7 +56,7 @@ html, body{
     padding-bottom: 20px;
 }
 .agenda-list{
-    width: 70%;
+    width: 80%;
     display:none;
 }
 .agenda-list[day="1"]{
@@ -417,4 +419,40 @@ html, body{
     width: 565px;
     height: 397px;
     flex-shrink: 0; 
+}
+
+.banner{
+    position: relative;
+    margin: auto;
+}
+.banners{
+    display: none;
+}
+
+.banner-arrows{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.banner-arrows *{
+    width: 10px;
+    cursor: pointer
+}
+
+.fade {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+.sticky{
+    position: fixed;
+    top: 0;
 }
