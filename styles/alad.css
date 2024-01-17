@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#sektsioon {
+    position: center;
+    align-items: center;
+    display: flow-root;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+
+/*Parent*/
+
+
+#kastid {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;       
+    position: relative;
+    /* min-height:385px; */
+    margin: 40px;
+    padding: 30px;
+}
+
+
+/*child*/
+#kasti_valiskulg1 {
+    
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+ 
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg1:hover {
+    background-color: rgb(219, 126, 6);
+}
+
+
+#kasti_valiskulg2 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode: multiply;
+
+}
+#kasti_valiskulg2:hover {
+    background-color: #007D6B;
+}
+
+#kasti_valiskulg3 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg3:hover {
+    background-color: #0089CF ;
+}
+
+
+#kasti_valiskulg4 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #1986b5;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg4:hover {
+    background-color: #870065 ;
+}
+
+.cls3 {
+    justify-content: center;
+    width: flex;
+    display:flex;
+    padding: 30px;
+    margin-bottom:15px;
+    position: relative;
+    top: initial;
+    text-align: center;
+    
+}
