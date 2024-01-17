@@ -17,14 +17,16 @@ body *{
 #agenda-switch{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
 }
 .agenda-switch-days{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: right;
+    gap: 5px;
     padding: 20px;
     width: 10%;
+    margin-right: 10px;
 }
 .day-switch{
     padding: 10px;
@@ -44,11 +46,14 @@ body *{
     width: 80%;
     box-shadow: 0px 5px 5px #F5F7FA;
     margin: auto;
-    border: 1px solid black;
     padding-bottom: 20px;
 }
 .agenda-list{
     width: 70%;
+    display:none;
+}
+.agenda-list[day="1"]{
+    display: block;
 }
 .agenda-item-container:nth-child(odd){
     background-color: #F5F7FA;
@@ -67,7 +72,19 @@ body *{
 }
 .agenda-item-header{
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.agenda-item-header h1{
+    font-family: 'Blackhawk Regular';
+    font-size: 56px;
+}
+.agenda-item-header img{
+    width: 100px;
+    margin: 0px 10px 0px 10px;
+}
+
 .agenda-item a{
     text-decoration: underline;
     color: #000000;
@@ -81,6 +98,19 @@ body *{
 .agenda-item-info *{
     margin: 0px;
     padding: 5px;
+}
+.agenda-game-title{
+    font-size: 20px;
+}
+
+.country-flag{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px 0px 5px;
+}
+.country-flag p{
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .active {
@@ -119,3 +149,11 @@ body *{
     padding: 20px;
     text-align: center;
 }
+
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid #00B89D;
+    border-bottom: 50px solid transparent;
+  }
