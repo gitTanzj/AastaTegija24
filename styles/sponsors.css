@@ -3,11 +3,56 @@
     src: url('../assets/fonts/BLACKHAWK.otf') format("opentype");
 }
 
-#spons_t_disain {
+
+#spons_title {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 2%; 
+}
+
+
+.spons_t_disain {
     color: #000;
-    font-family: BLACKHAWK;
+    font-family: 'Blackhawk Regular';
     font-size: 96px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal; 
+    line-height: normal;
+    
 }
+
+#img_div {
+    
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin: auto;
+    
+    position: relative;
+    top: initial;
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 1%;
+    padding: 12px;
+    gap: 90px;
+    
+    
+}
+
+
+#fun_m {
+    position: relative;
+    top: initial;
+    
+    
+    
+}
+
+#un_mot {
+    position: relative;
+    top: initial;
+    
+    
+}
+
