@@ -14,10 +14,25 @@ body *{
     margin: 0px;
     padding: 0px;
 }
+#agenda-switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.agenda-switch-days{
+    padding: 20px;
+}
 .agenda{
     width: 80%;
     box-shadow: 0px 5px 5px #F5F7FA;
     margin: auto;
+    border: 1px solid black;
+}
+.agenda-list{
+    width: 70%;
+}
+.agenda-item-container:nth-child(odd){
+    background-color: #F5F7FA;
 }
 .agenda-header{
     font-family: 'Blackhawk Regular';
@@ -30,6 +45,9 @@ body *{
     flex-direction: row;
     padding: 0px 40px 0px 40px;
     justify-content: space-between;
+}
+.agenda-item h3{
+    justify-content: cetn;
 }
 .agenda-item a{
     text-decoration: underline;
@@ -45,6 +63,7 @@ body *{
     margin: 0px;
     padding: 5px;
 }
+<<<<<<< HEAD
 
 /*Centers the menubar and it's properties inside it.*/
 #menubar{
@@ -69,4 +88,11 @@ body *{
     color: white;
     text-decoration: none;
     padding: 4em
+=======
+.agenda-footer{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+>>>>>>> agenda
 }
