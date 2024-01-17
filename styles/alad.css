@@ -25,7 +25,24 @@ body {
     /* min-height:385px; */
     margin: 40px;
     padding: 30px;
+
 }
+
+.scroll_par {
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding: 1em 1em 0;
+}
+
+.scroll_chil {
+    overflow: auto;
+    white-space: nowrap;
+    color: white;
+    padding-bottom: 1em;
+}
+
 
 
 /*child*/
@@ -40,12 +57,13 @@ body {
     width: 296px;
     position: relative;
     top: initial;
-    background-color: rgb(0, 0, 0);
+    background: url(../images/basket.png) no-repeat;
+    /* background-color: rgb(0, 0, 0); */
     background-blend-mode: multiply;
 }
 
 #kasti_valiskulg1:hover {
-    background-color: rgb(219, 126, 6);
+    background: url(../images/kollane.png) no-repeat;
 }
 
 
@@ -59,12 +77,12 @@ body {
     width: 296px;
     position: relative;
     top: initial;
-    background-color: rgb(0, 0, 0);
+    background: url(../images/volley.png) no-repeat;
     background-blend-mode: multiply;
 
 }
 #kasti_valiskulg2:hover {
-    background-color: #007D6B;
+    background: url(../images/roheline.png) no-repeat;
 }
 
 #kasti_valiskulg3 {
@@ -77,12 +95,12 @@ body {
     width: 296px;
     position: relative;
     top: initial;
-    background-color: rgb(0, 0, 0);
+    background: url(../images/table_tennis.png) no-repeat;
     background-blend-mode: multiply;
 }
 
 #kasti_valiskulg3:hover {
-    background-color: #0089CF ;
+    background: url(../images/sinine.png) no-repeat;
 }
 
 
@@ -96,12 +114,12 @@ body {
     width: 296px;
     position: relative;
     top: initial;
-    background-color: rgb(0, 0, 0);
+    background: url(../images/leaders.png) no-repeat;
     background-blend-mode: multiply;
 }
 
 #kasti_valiskulg4:hover {
-    background-color: #870065 ;
+    background: url(../images/roosa.png) no-repeat;
 }
 
 .cls3 {
