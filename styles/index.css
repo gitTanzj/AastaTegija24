@@ -7,6 +7,8 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body *{
     margin: 0px;
@@ -42,4 +44,29 @@ body *{
 .agenda-item-info *{
     margin: 0px;
     padding: 5px;
+}
+
+/*Centers the menubar and it's properties inside it.*/
+#menubar{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.5em;
+}
+/*Size properties of the menubar logo*/
+#menubar img{
+    width: 145px;
+    height: 100px;
+}
+/*Displays each tab in it's own line*/
+.links li{
+    display: inline-block;
+}
+/*Changes menubar tabs white and removes underlining*/
+.links li a{
+    color: white;
+    text-decoration: none;
+    padding: 4em
 }
