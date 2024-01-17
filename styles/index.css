@@ -22,19 +22,43 @@ html, body{
 #agenda-switch{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: right;
 }
 .agenda-switch-days{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    gap: 5px;
     padding: 20px;
+    width: 10%;
+    margin-right: 10px;
+}
+.day-switch{
+    padding: 10px;
+    background-color: white;
+    color: #00B89D;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    transition: 0.1s;
+}
+.day-switch:hover{
+    cursor: pointer;
+}
+.day-switch h6{
+    font-size: 18px;
 }
 .agenda{
     width: 80%;
     box-shadow: 0px 5px 5px #F5F7FA;
     margin: auto;
-    border: 1px solid black;
+    padding-bottom: 20px;
 }
 .agenda-list{
     width: 70%;
+    display:none;
+}
+.agenda-list[day="1"]{
+    display: block;
 }
 .agenda-item-container:nth-child(odd){
     background-color: #F5F7FA;
@@ -51,9 +75,21 @@ html, body{
     padding: 0px 40px 0px 40px;
     justify-content: space-between;
 }
-.agenda-item h3{
-    justify-content: cetn;
+.agenda-item-header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.agenda-item-header h1{
+    font-family: 'Blackhawk Regular';
+    font-size: 56px;
+}
+.agenda-item-header img{
+    width: 100px;
+    margin: 0px 10px 0px 10px;
+}
+
 .agenda-item a{
     text-decoration: underline;
     color: #000000;
@@ -67,6 +103,25 @@ html, body{
 .agenda-item-info *{
     margin: 0px;
     padding: 5px;
+}
+.agenda-game-title{
+    font-size: 20px;
+}
+
+.country-flag{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px 0px 5px;
+}
+.country-flag p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.active {
+    background-color: #00B89D;
+    color: white;
+    border: 1px solid #00B89D;
 }
 
 /*Centers the menubar and it's properties inside it.*/
@@ -96,7 +151,7 @@ html, body{
 .agenda-footer{
     width: 80%;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -160,3 +215,11 @@ html, body{
 .Organizers img{
     margin-top: 0.5em;
 }
+
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid #00B89D;
+    border-bottom: 50px solid transparent;
+  }
