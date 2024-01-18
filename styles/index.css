@@ -127,7 +127,7 @@ body *{
     margin: 0px 15px 0px 5px;
 }
 .country-flag p{
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -337,20 +337,6 @@ body *{
     background: url(../assets/images/roosa.png) no-repeat;
 }
 
-/*
-.cls3 {
-    justify-content: center;
-    width: flex;
-    display:flex;
-    padding: 30px;
-    margin-bottom:15px;
-    position: relative;
-    top: initial;
-    text-align: center;
-    
-}
-*/
-
 #hist_div {
     background: #F5F7FA;
 }
@@ -517,8 +503,16 @@ body *{
     .game{
         flex-direction: column;
     }
+    .game p{
+        text-align: center;
+        font-weight: 700;
+    }
+    .agenda-game-title{
+        text-align: center;
+    }
     .game .agenda-item-header{
-        display: none;
+        display: flex;
+        justify-content: space-between;
     }
     .agenda-item-header h2{
         font-size: 18px;
@@ -600,5 +594,20 @@ body *{
     }
     #menubar img{
         margin-right: 1.25em;
+    }
+    .country-flag img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .country-flag p{
+        font-size: 1rem;
+    }
+    .navbar-buttons li{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-buttons li a{
+        padding: 20px;
     }
 }
