@@ -67,6 +67,7 @@ body *{
 }
 .agenda-list{
     width: 80%;
+    min-width: 80%;
     display:none;
 }
 .agenda-list[day="1"]{
@@ -95,10 +96,10 @@ body *{
 }
 .agenda-item-header h1{
     font-family: 'Blackhawk Regular';
-    font-size: 56px;
+    font-size: 3rem;
 }
 .agenda-item-header img{
-    width: 100px;
+    width: 80%;
     margin: 0px 10px 0px 10px;
 }
 
@@ -176,7 +177,7 @@ body *{
     position: sticky;
     top: 100vh;
     background-color: black;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 /* Contact and Organizers title's. */
 #footerSection div{
@@ -189,7 +190,6 @@ body *{
 
 /* Pushes Contact a little closer to the middle. */
 .Contact{
-    margin-left: 0.5em;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -201,7 +201,7 @@ body *{
     text-decoration: none;
     color: white;
 }
-/* Because images and tex in a list item(li) don't align properly, we use flexbox to align them properly. */
+/* Because images and text in a list item(li) don't align properly, we use flexbox to align them properly. */
 .Contact li{
     display: flex;
     flex-direction: row;
@@ -241,11 +241,7 @@ body *{
     border-top: 50px solid transparent;
     border-left: 100px solid #00B89D;
     border-bottom: 50px solid transparent;
-  }
-
-
-
-
+}
 
 #sektsioon {
     position: center;
@@ -253,13 +249,9 @@ body *{
     display: flow-root;
     margin: auto;
 }
-
-
 /*Parent*/
-
-
 #kastid {
-    display:flex;
+    display:block;
     align-items:center;
     justify-content:center;
     gap:30px;       
@@ -267,26 +259,18 @@ body *{
     /* min-height:385px; */
     margin: 40px;
     padding: 30px;
-
-}
-
-.scroll_par {
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    padding: 1em 1em 0;
-}
-
-.scroll_chil {
-    overflow: auto;
+    overflow-x: scroll;
     white-space: nowrap;
     color: white;
     padding-bottom: 1em;
 }
-
-
-
+.scroll_par {
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
 /*child*/
 #kasti_valiskulg1 {
     
@@ -409,7 +393,6 @@ body *{
 
     position: relative;
     top: initial;
-    margin-left: 40px;
     color: var(--Must, #000);
     font-family: Montserrat;
     font-size: 18px;
@@ -431,7 +414,7 @@ body *{
 }
 
 #hist_p_siz {
-    margin: 10%;
+    margin: clamp(0.5rem, 1vw, 1rem);
     position: relative;
     width: 565px;
     height: 397px;
@@ -443,7 +426,7 @@ body *{
     margin: auto;
 }
 .banners{
-    display: none;
+    display:none;
 }
 
 .banner-arrows{
@@ -519,4 +502,112 @@ body *{
 #un_mot {
     position: relative;
     top: initial; 
+}
+
+@media (max-width: 900px) {
+    html{
+        overflow-x: hidden;
+    }
+    .agenda{
+        justify-content: center;
+        width: 90%;
+    }
+    .agenda-switch-days{
+        width: 100%;
+        margin:none;
+        justify-content: center;
+    }
+    .agenda-list{
+        width: 100%;
+    }
+    .agenda-item{
+        padding: 0px 10px 0px 10px;
+    }
+    .game{
+        flex-direction: column;
+    }
+    .game .agenda-item-header{
+        display: none;
+    }
+    .agenda-item-header h2{
+        font-size: 18px;
+        text-align: right;
+    }
+    .agenda-item-info a{
+        display:none
+    }
+    #agenda-switch{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+    }
+    .agenda-switch-days{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    #kastid{
+        display: block;
+    }
+    #kasti-valiskulg1{
+        background: url(../assets/images/fullBasketball.png) no-repeat;
+    }
+    #kasti_valiskulg2{
+        background: url(../assets/images/fullVolleyball.png) no-repeat;
+    }
+    #kasti-valiskulg3{
+        background: url(../assets/images/fullTableTennis.png) no-repeat;
+    }
+    #kasti-valiskulg4{
+        background: url(../assets/images/fullSchoolLeaders.png) no-repeat;
+    }
+    #hist_t{
+        width: 100%;
+        margin-left:none;
+    }
+    #hist_t_p{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #hist_p_siz{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        margin:none;
+    }
+    #img_div{
+        display: flex;
+        flex-direction: column;
+    }
+    #footerSection{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Organizers p{
+        display: flex;
+        justify-content: center;
+    }
+    .Organizers img{
+        width: 100%;
+    }
+    .Contact p{
+        display: flex;
+        justify-content: center;
+    }
+    .Contact ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links li a{
+        padding: 1em;
+    }
+    #menubar img{
+        margin-right: 1.25em;
+    }
 }
