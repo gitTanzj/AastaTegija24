@@ -15,7 +15,7 @@ body{
 }
 /* So that the footer stays at the bottom. */
 html, body{
-    height: 100%;
+    height: 100dvh;
 }
 body *{
     margin: 0px;
@@ -137,8 +137,8 @@ body *{
     border: 1px solid #00B89D;
 }
 
-/*Centers the menubar and it's properties inside it.*/
-#menubar{
+/*Navigation bar which also acts as our header. */
+#navbar{
     display: flex;
     background-color: black;
     justify-content: center;
@@ -146,22 +146,22 @@ body *{
     overflow: hidden;
     padding: 0.5em;
 }
-/*Size properties of the menubar logo*/
-#menubar img{
+/* Applies a fix size for header logo. */
+#navbar img{
     width: 145px;
     height: 100px;
 }
-/*Displays each tab in it's own line*/
-.links li{
+/* Displays each Navigation element on it's own line on the Desktop version. */
+.navbar-buttons li{
     display: inline-block;
 }
-/*Changes menubar tabs white and removes underlining*/
-.links li a{
+/* Turns the Navigation elements text color white and removes the underlining when not hovering. */
+.navbar-buttons li a{
     color: white;
     text-decoration: none;
     padding: 4em;
 }
-.links li a:hover{
+.navbar-buttons li a:hover{
     text-decoration: underline;
 }
 .agenda-footer{
@@ -185,24 +185,23 @@ body *{
     color: white;
     padding: 1em;
     font-family: 'Blackhawk Regular';
-    font-size: xx-large;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
 
-/* Pushes Contact a little closer to the middle. */
-.Contact{
+/* Removes padding and margin around the contact list. */
+.Contact-info{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-/* Contact list items. */
-.Contact li p{
+/* Contact list text properties. */
+.Contact-info li{
     font-size: large;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    color: white;
 }
 /* Because images and text in a list item(li) don't align properly, we use flexbox to align them properly. */
-.Contact li{
+.Contact-info li{
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -210,28 +209,22 @@ body *{
     padding: 0.25em;
 }
 
-/* Contact list item images. */
-.Contact img{
+/* Seperates the Icons next to the contact information. */
+.Contact-info img{
     margin-right: 0.25em;
 }
 
-.Contact a{
+/* Makes sure the Contact text stays white and not in a blueish link color. */
+.Contact-info a{
     color: white;
 }
-
-/* Pushes Organizer a little closer to the middle. */
-.Organizers{
-    margin-right: 0.5em;
-}
-
-/* Makes sure the title Organizers stays on the right. */
-.Organizers p{
+/* Alligns the text Organizers on the right side of the footer. */
+.Organizers-info p{
     display: flex;
     justify-content: right;
 }
-
 /* Organizers img is moved more on the same level as Contact list items. */
-.Organizers img{
+.Organizers-info img{
     margin-top: 0.5em;
 }
 
@@ -277,7 +270,6 @@ body *{
     display: inline-block;
     padding: 20px;
     margin-bottom: 15px;
- 
     color: #fff;
     height: 208px;
     width: 296px;
@@ -297,7 +289,6 @@ body *{
     display: inline-block;
     padding: 20px;
     margin-bottom: 15px;
-    background-color: #1986b5;
     color: #fff;
     height: 208px;
     width: 296px;
@@ -315,7 +306,6 @@ body *{
     display: inline-block;
     padding: 20px;
     margin-bottom: 15px;
-    background-color: #1986b5;
     color: #fff;
     height: 208px;
     width: 296px;
@@ -334,7 +324,6 @@ body *{
     display: inline-block;
     padding: 20px;
     margin-bottom: 15px;
-    background-color: #1986b5;
     color: #fff;
     height: 208px;
     width: 296px;
@@ -348,6 +337,7 @@ body *{
     background: url(../assets/images/roosa.png) no-repeat;
 }
 
+/*
 .cls3 {
     justify-content: center;
     width: flex;
@@ -359,6 +349,7 @@ body *{
     text-align: center;
     
 }
+*/
 
 #hist_div {
     background: #F5F7FA;
@@ -504,7 +495,7 @@ body *{
     top: initial; 
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     html{
         overflow-x: hidden;
     }
