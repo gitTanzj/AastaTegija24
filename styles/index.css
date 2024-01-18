@@ -1,3 +1,4 @@
+/* GLOBAALSED STIILID */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 @font-face{
@@ -29,6 +30,160 @@ body *{
     visibility: hidden;
 }
 
+/* STIILID NAVBARI JAOKS */
+
+/*Navigation bar which also acts as our header. */
+#navbar{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.5em;
+}
+/* Applies a fix size for header logo. */
+#navbar img{
+    width: 145px;
+    height: 100px;
+}
+/* Displays each Navigation element on it's own line on the Desktop version. */
+.navbar-buttons li{
+    display: inline-block;
+}
+/* Turns the Navigation elements text color white and removes the underlining when not hovering. */
+.navbar-buttons li a{
+    color: white;
+    text-decoration: none;
+    padding: 4em;
+}
+.navbar-buttons li a:hover{
+    text-decoration: underline;
+}
+
+/* KLEEPUVA PÄISE JAOKS */
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* FADE ANIMATSIOON BANNERI KARUSSELLI JAOKS */
+.fade {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+/* STIILID SPORDIALADE JAOKS */
+#sektsioon {
+    position: center;
+    align-items: center;
+    display: flow-root;
+    margin: auto;
+}
+/*Parent*/
+#kastid {
+    display:block;
+    align-items:center;
+    justify-content:center;
+    gap:30px;       
+    position: relative;
+    margin: 40px;
+    padding: 30px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    color: white;
+    padding-bottom: 1em;
+}
+.scroll_par {
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+/*child*/
+#kasti_valiskulg1 {
+    
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../assets/images/basket.png) no-repeat;
+    /* background-color: rgb(0, 0, 0); */
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg1:hover {
+    background: url(../assets/images/kollane.png) no-repeat;
+}
+
+
+#kasti_valiskulg2 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../assets/images/volley.png) no-repeat;
+    background-blend-mode: multiply;
+
+}
+#kasti_valiskulg2:hover {
+    background: url(../assets/images/roheline.png) no-repeat;
+}
+
+#kasti_valiskulg3 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../assets/images/table_tennis.png) no-repeat;
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg3:hover {
+    background: url(../assets/images/sinine.png) no-repeat;
+}
+
+
+#kasti_valiskulg4 {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    height: 208px;
+    width: 296px;
+    position: relative;
+    top: initial;
+    background: url(../assets/images/leaders.png) no-repeat;
+    background-blend-mode: multiply;
+}
+
+#kasti_valiskulg4:hover {
+    background: url(../assets/images/roosa.png) no-repeat;
+}
+
+/* STIILID AJAKAVA JAOKS */
 #agenda-switch{
     display: flex;
     flex-direction: row;
@@ -136,34 +291,6 @@ body *{
     color: white;
     border: 1px solid #00B89D;
 }
-
-/*Navigation bar which also acts as our header. */
-#navbar{
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 0.5em;
-}
-/* Applies a fix size for header logo. */
-#navbar img{
-    width: 145px;
-    height: 100px;
-}
-/* Displays each Navigation element on it's own line on the Desktop version. */
-.navbar-buttons li{
-    display: inline-block;
-}
-/* Turns the Navigation elements text color white and removes the underlining when not hovering. */
-.navbar-buttons li a{
-    color: white;
-    text-decoration: none;
-    padding: 4em;
-}
-.navbar-buttons li a:hover{
-    text-decoration: underline;
-}
 .agenda-footer{
     width: 80%;
     margin: auto;
@@ -171,172 +298,7 @@ body *{
     text-align: center;
 }
 
-/* Sticky footer that always stays at the very bottom. */
-#footerSection{
-    display: flex;
-    position: sticky;
-    top: 100vh;
-    background-color: black;
-    justify-content: space-evenly;
-}
-/* Contact and Organizers title's. */
-#footerSection div{
-    display: inline-block;
-    color: white;
-    padding: 1em;
-    font-family: 'Blackhawk Regular';
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
-}
-
-/* Removes padding and margin around the contact list. */
-.Contact-info{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-/* Contact list text properties. */
-.Contact-info li{
-    font-size: large;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-}
-/* Because images and text in a list item(li) don't align properly, we use flexbox to align them properly. */
-.Contact-info li{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    padding: 0.25em;
-}
-
-/* Seperates the Icons next to the contact information. */
-.Contact-info img{
-    margin-right: 0.25em;
-}
-
-/* Makes sure the Contact text stays white and not in a blueish link color. */
-.Contact-info a{
-    color: white;
-}
-/* Alligns the text Organizers on the right side of the footer. */
-.Organizers-info p{
-    display: flex;
-    justify-content: right;
-}
-/* Organizers img is moved more on the same level as Contact list items. */
-.Organizers-info img{
-    margin-top: 0.5em;
-}
-
-#triangle-right {
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-left: 100px solid #00B89D;
-    border-bottom: 50px solid transparent;
-}
-
-#sektsioon {
-    position: center;
-    align-items: center;
-    display: flow-root;
-    margin: auto;
-}
-/*Parent*/
-#kastid {
-    display:block;
-    align-items:center;
-    justify-content:center;
-    gap:30px;       
-    position: relative;
-    /* min-height:385px; */
-    margin: 40px;
-    padding: 30px;
-    overflow-x: scroll;
-    white-space: nowrap;
-    color: white;
-    padding-bottom: 1em;
-}
-.scroll_par {
-    display: flex;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-}
-/*child*/
-#kasti_valiskulg1 {
-    
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-    height: 208px;
-    width: 296px;
-    position: relative;
-    top: initial;
-    background: url(../assets/images/basket.png) no-repeat;
-    /* background-color: rgb(0, 0, 0); */
-    background-blend-mode: multiply;
-}
-
-#kasti_valiskulg1:hover {
-    background: url(../assets/images/kollane.png) no-repeat;
-}
-
-
-#kasti_valiskulg2 {
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-    height: 208px;
-    width: 296px;
-    position: relative;
-    top: initial;
-    background: url(../assets/images/volley.png) no-repeat;
-    background-blend-mode: multiply;
-
-}
-#kasti_valiskulg2:hover {
-    background: url(../assets/images/roheline.png) no-repeat;
-}
-
-#kasti_valiskulg3 {
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-    height: 208px;
-    width: 296px;
-    position: relative;
-    top: initial;
-    background: url(../assets/images/table_tennis.png) no-repeat;
-    background-blend-mode: multiply;
-}
-
-#kasti_valiskulg3:hover {
-    background: url(../assets/images/sinine.png) no-repeat;
-}
-
-
-#kasti_valiskulg4 {
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-    height: 208px;
-    width: 296px;
-    position: relative;
-    top: initial;
-    background: url(../assets/images/leaders.png) no-repeat;
-    background-blend-mode: multiply;
-}
-
-#kasti_valiskulg4:hover {
-    background: url(../assets/images/roosa.png) no-repeat;
-}
-
+/* AJALOO SEKTSIOONI STIILID */
 #hist_div {
     background: #F5F7FA;
 }
@@ -398,6 +360,7 @@ body *{
     flex-shrink: 0; 
 }
 
+/* BANNERI PILDIKARUSSELLI JAOKS */
 .banner{
     position: relative;
     margin: auto;
@@ -416,26 +379,8 @@ body *{
     cursor: pointer
 }
 
-.fade {
-    animation: fade 2s;
-}
 
-@keyframes fade {
-    from{
-        opacity: 0.8;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-}
-
+/* SPONSORID */
 #spons_title {
     text-align: center;
     padding-top: 20px;
@@ -481,6 +426,66 @@ body *{
     top: initial; 
 }
 
+/* STIILID JALUSE JAOKS */
+
+/* Sticky footer that always stays at the very bottom. */
+#footerSection{
+    display: flex;
+    position: sticky;
+    top: 100vh;
+    background-color: black;
+    justify-content: space-evenly;
+}
+/* Contact and Organizers title's. */
+#footerSection div{
+    display: inline-block;
+    color: white;
+    padding: 1em;
+    font-family: 'Blackhawk Regular';
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+}
+
+/* Removes padding and margin around the contact list. */
+.Contact-info{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Contact list text properties. */
+.Contact-info li{
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+/* Because images and text in a list item(li) don't align properly, we use flexbox to align them properly. */
+.Contact-info li{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0.25em;
+}
+
+/* Seperates the Icons next to the contact information. */
+.Contact-info img{
+    margin-right: 0.25em;
+}
+
+/* Makes sure the Contact text stays white and not in a blueish link color. */
+.Contact-info a{
+    color: white;
+}
+/* Alligns the text Organizers on the right side of the footer. */
+.Organizers-info p{
+    display: flex;
+    justify-content: right;
+}
+/* Organizers img is moved more on the same level as Contact list items. */
+.Organizers-info img{
+    margin-top: 0.5em;
+}
+
+/* STIILID MOBIILVAATE JAOKS */
 @media screen and (max-width: 900px) {
     html{
         overflow-x: hidden;
