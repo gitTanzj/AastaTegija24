@@ -543,16 +543,16 @@ body *{
     #kastid{
         display: block;
     }
-    #kasti-valiskulg1{
+    #kasti_valiskulg1{
         background: url(../assets/images/fullBasketball.png) no-repeat;
     }
     #kasti_valiskulg2{
         background: url(../assets/images/fullVolleyball.png) no-repeat;
     }
-    #kasti-valiskulg3{
+    #kasti_valiskulg3{
         background: url(../assets/images/fullTableTennis.png) no-repeat;
     }
-    #kasti-valiskulg4{
+    #kasti_valiskulg4{
         background: url(../assets/images/fullSchoolLeaders.png) no-repeat;
     }
     #hist_t{
@@ -579,26 +579,26 @@ body *{
         display: flex;
         flex-direction: column-reverse;
     }
-    .Organizers p{
+    .Organizers-info p{
         display: flex;
         justify-content: center;
     }
-    .Organizers img{
+    .Organizers-info img{
         width: 100%;
     }
-    .Contact p{
+    .Contact-info p{
         display: flex;
         justify-content: center;
     }
-    .Contact ul{
+    .Contact-info ul{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .links li a{
+    .navbar-buttons li a{
         padding: 1em;
     }
-    #menubar img{
+    #navbar img{
         margin-right: 1.25em;
     }
 }
