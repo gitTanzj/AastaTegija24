@@ -98,7 +98,7 @@ body *{
     position: relative;
     margin: 40px;
     padding: 30px;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     color: white;
     padding-bottom: 1em;
@@ -240,7 +240,7 @@ body *{
 .agenda-item{
     display: flex;
     flex-direction: row;
-    padding: 0px 40px 0px 40px;
+    padding: 10px 30px 10px 30px;
     justify-content: space-between;
 }
 .agenda-item-header{
@@ -271,6 +271,16 @@ body *{
 .agenda-item-info *{
     margin: 0px;
     padding: 5px;
+}
+.agenda-item-time{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.agenda-item-place{
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 .agenda-game-title{
     font-size: 20px;
@@ -432,7 +442,7 @@ body *{
 #footerSection{
     display: flex;
     position: sticky;
-    top: 100vh;
+    top: 100dvh;
     background-color: black;
     justify-content: space-evenly;
 }
@@ -444,7 +454,6 @@ body *{
     font-family: 'Blackhawk Regular';
     font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
-
 /* Removes padding and margin around the contact list. */
 .Contact-info{
     list-style-type: none;
@@ -502,8 +511,8 @@ body *{
     .agenda-list{
         width: 100%;
     }
-    .agenda-item{
-        padding: 0px 10px 0px 10px;
+    .agenda-item-container{
+        padding: 10px;
     }
     .game{
         flex-direction: column;
@@ -524,7 +533,8 @@ body *{
         text-align: right;
     }
     .agenda-item-info a{
-        display:none
+        display: flex;
+        justify-content: center;
     }
     #agenda-switch{
         display: flex;
@@ -614,5 +624,25 @@ body *{
     }
     .navbar-buttons li a{
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .agenda-item{
+        padding: 0px 10px 0px 10px;
+    }
+    .game{
+        flex-direction: column;
+    }
+    .game p{
+        text-align: center;
+        font-weight: 700;
+    }
+    .agenda-game-title{
+        text-align: center;
+    }
+    .game .agenda-item-header{
+        display: flex;
+        justify-content: space-between;
     }
 }
